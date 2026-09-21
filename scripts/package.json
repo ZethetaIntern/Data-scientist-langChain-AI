@@ -1,0 +1,14 @@
+{
+  "name": "readme-asset-tooling",
+  "private": true,
+  "type": "module",
+  "description": "Maintainer tooling: renders the README screenshots, diagrams and banner with a headless Chromium.",
+  "scripts": {
+    "assets": "node make_readme_assets.mjs"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium": "^153.0.0",
+    "mermaid": "^11.4.0",
+    "puppeteer-core": "^24.0.0"
+  }
+}

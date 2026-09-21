@@ -1,0 +1,19 @@
+[project]
+name = "data-scientist-langchain-ai"
+version = "0.1.0"
+description = "A LangChain-powered Data Scientist agent with a FastAPI backend and React frontend."
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "frontend", "artifacts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]
+ignore = ["E501", "B008"]  # B008: FastAPI uses call defaults (File, Query) by design
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
